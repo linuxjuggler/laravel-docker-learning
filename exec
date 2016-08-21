@@ -1,0 +1,9 @@
+#! /bin/sh
+
+#docker exec $1 php artisan $2 $3 $4
+
+#run the commands as ./exec app_1 composer.phar install
+#run the commands as ./exec app_1 composer.phar require something
+#run the commands as ./exec app_1 artisan migrate
+
+docker exec docker_$1 php $2 $3 $4 $5
