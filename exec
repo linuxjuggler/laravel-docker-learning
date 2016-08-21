@@ -6,4 +6,4 @@
 #run the commands as ./exec app_1 composer.phar require something
 #run the commands as ./exec app_1 artisan migrate
 
-docker exec docker_$1 php $2 $3 $4 $5
+docker exec $1 php $2 $3 $4 $5

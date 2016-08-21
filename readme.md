@@ -10,9 +10,9 @@ This is just a small start point if you want to run laravel on docker without cr
 ## Usage
 
 1. You can use the `exec` file to execuete the commands on docker, but make sure that you give it execute permission `chmod +x exec`.
-1. To install the libraries using composer you execute `./exec app_1 composer.phar install`.
-1. To require a new library using composer you execute a command like `./exec app_1 composer.phar require league/flysystem-sftp`.
-1. To run any `artisan` command you can execute it like `./exec app_1 artisan list`. 
+1. To install the libraries using composer you execute `./exec app_1 composer.phar install`, remember to change app_1 with the name of the php image you have.
+1. To require a new library using composer you execute a command like `./exec app_1 composer.phar require league/flysystem-sftp`, remember to change app_1 with the name of the php image you have..
+1. To run any `artisan` command you can execute it like `./exec app_1 artisan list`, remember to change app_1 with the name of the php image you have.. 
 
 ## Thanks
 
