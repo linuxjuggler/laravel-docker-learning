@@ -5,7 +5,7 @@ This is just a small start point if you want to run laravel on docker without cr
 ## Requirements
 
 1. Install docker locally ( I've used docker for mac, but I guess it shoudl work any where you have docker installed ).
-1. PHP-fpm, nginx, mysql, and redis docker images, and dont worry the script will download them for you.
+1. PHP-fpm, nginx, mysql, and redis docker images, and don't worry the script will download them for you.
 
 ## Usage
 
