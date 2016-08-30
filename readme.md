@@ -10,9 +10,11 @@ This is just a small start point if you want to run laravel on docker without cr
 ## Usage
 
 1. You can use the `exec` file to execute the commands on docker, but make sure that you give it execute permission `chmod +x exec`.
-1. To install the libraries using composer you execute `./exec app_1 composer.phar install`, *remember to change app_1 with the name of the php image you have*.
-1. To require a new library using composer you execute a command like `./exec app_1 composer.phar require league/flysystem-sftp`, *remember to change app_1 with the name of the php image you have*.
-1. To run any `artisan` command you can execute it like `./exec app_1 artisan list`, *remember to change app_1 with the name of the php image you have*. 
+1. To install the libraries using composer you execute `./exec docker_laravel composer.phar install`.
+1. To require a new library using composer you execute a command like `./exec docker_laravel composer.phar require league/flysystem-sftp`.
+1. To run any `artisan` command you can execute it like `./exec docker_laravel artisan list`.
+
+*PS:* the exec may not work as it should, esp if you have a lot of argument to send, and am still trying to figure the best way to rewrite the file.
 
 ## Thanks
 
@@ -20,9 +22,11 @@ This is just a small start point if you want to run laravel on docker without cr
 1. Thanks for [Dayle Rees](https://twitter.com/daylerees/status/767101286663725059) for give me the idea of the exec shell script.
 1. Thanks for everyone who helped to create those nice docker images.
 
-## Note
+## Note for windows users
 
-Its not going to work with *windows*, as am still trying to figure out the best way to map the shared folders via docker-compose
+For windows users, make sure that you have enabled the shared volume from docker engine before you run the script
+
+![settings shared drives](https://docs.docker.com/docker-for-windows/images/settings-shared-drives.png)
 
 ## License
 

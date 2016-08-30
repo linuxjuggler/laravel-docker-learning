@@ -10,6 +10,9 @@ services:
             - "8080:80"
         links:
             - app
+        labels:
+            com.docker-learning.web: "Nginx Server"
+        container_name: docker_nginx
 
     app:
         build:
@@ -22,7 +25,10 @@ services:
             - cache
         environment:
             - "DB_PORT=3306"
-            - "DB_HOST=database" 
+            - "DB_HOST=database"
+        labels:
+            com.docker-learning.app: "Laravel Server"
+        container_name: docker_laravel            
 
     database:
         image: mysql:5.7
@@ -33,11 +39,17 @@ services:
             - "3306:3306"
         volumes:
             - db_data:/var/lib/mysql
+        labels:
+            com.docker-learning.db: "Database Server"
+        container_name: docker_database  
 
     cache:
         image:  redis:latest
         ports:  
             - "6379:6379"
+        labels:
+            com.docker-learning.cache: "Cache Server"
+        container_name: docker_cache           
 
 volumes:
     db_data:
